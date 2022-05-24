@@ -1,3 +1,35 @@
 CREATE TABLE USERTABLE (USERNAME VARCHAR(20) NOT NULL, PASSWORD LONG VARCHAR NOT NULL, "ROLE" VARCHAR(10), PRIMARY KEY (USERNAME));
+INSERT INTO APP.USERTABLE (USERNAME VARCHAR(20) NOT NULL, PASSWORD LONG VARCHAR NOT NULL, "ROLE" VARCHAR(10), PRIMARY KEY (USERNAME))
+VALUES ("Thordenal", "123RomaInvicta", "admin");
+VALUES ("Jason", "Candlesticks", "admin");
+VALUES ("Goldworth", "Appstantoll", "admin");
+VALUES ("OLyHolIn", "eiU1LiYrLo63", "guest");
+VALUES ("tanTIONd", "5SyMi8rupE0X", "admin");
+VALUES ("gOSEyrot", "cbP4TgoUAS4G", "guest");
+VALUES ("sphOPHOs", "9wTlWpJWw448", "guest");
+VALUES ("efdOWlaN", "tomFsuDQGhnS", "admin");
+VALUES ("shREpIOr", "gPTCldU6ZScS", "admin");
+VALUES ("RupTIKET", "nCKRdKyxwGkg", "admin");
+VALUES ("WOryMeSI", "Z4HmlNO2Z2Wp", "admin");
+VALUES ("pRomEcra", "aRjUeyYo1l2Z", "admin");
+VALUES ("petywISe", "4iXkcZvLw5KJ", "admin");
+VALUES ("voMetOUn", "qPOhs2KRcteh", "admin");
+VALUES ("AGenEtro", "w2esmts6PhkI", "admin");
+VALUES ("beruDIaN", "7krj6nWCujp3", "guest");
+VALUES ("ASIOCkLe", "ceJxfSKzvL5f", "guest");
+VALUES ("uMBIqUil", "Zsunr2KOy1gS", "admin");
+VALUES ("PrENsIEL", "jL9LQnEHOUUx", "admin");
+VALUES ("PErYPTIA", "GRqkOIvvq5Fc", "guest");
+VALUES ("arthOrmb", "RnKw5j1zWl7r", "admin");
+VALUES ("cNinslig", "u8uUxEMm9Rm8", "guest");
+VALUES ("inloRapE", "dDOico2Dvh2O", "admin");
+VALUES ("PINaTepH", "xDerAY2WtAAG", "guest");
+VALUES ("ElErwOrk", "wc85OJpDopV0", "admin");
+VALUES ("enRUNert", "MMuyt82yXNYW", "guest");
+VALUES ("nIVerSat", "ncDZjMdrdDHq", "guest");
+VALUES ("nIVerSat", "YuHXYHChxgH4", "admin");
+VALUES ("gEnAPYRo", "L6Zjv5HRj8Qk", "admin");
+VALUES ("MagENSal", "4GtW2QQu2Rk6", "guest");
+VALUES ("UTHsTore", "8QIUPr2HbHlz", "admin");
 
 CREATE TABLE ITEMS ("ITEMNAME" VARCHAR(30), PRICE INTEGER, STOCK INTEGER);
