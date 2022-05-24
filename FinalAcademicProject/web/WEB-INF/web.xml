@@ -64,6 +64,46 @@
             <param-value>Account</param-value>
         </init-param>
     </servlet>
+    <servlet>
+        <servlet-name>LogoutControl</servlet-name>
+        <servlet-class>Controllers.LogoutControl</servlet-class>
+        <init-param>
+            <param-name>jdbcClassName</param-name>
+            <param-value>org.apache.derby.jdbc.ClientDriver</param-value>
+        </init-param>
+        <init-param>
+            <param-name>dbUserName</param-name>
+            <param-value>app</param-value>
+        </init-param>
+        <init-param>
+            <param-name>dbPassword</param-name>
+            <param-value>app</param-value>
+        </init-param>
+        <init-param>
+            <param-name>jdbcDriverURL</param-name>
+            <param-value>jdbc:derby://localhost:1527/Account</param-value>
+        </init-param>
+        <init-param>
+            <param-name>dbHostName</param-name>
+            <param-value>localhost</param-value>
+        </init-param>
+        <init-param>
+            <param-name>dbPort</param-name>
+            <param-value>1527</param-value>
+        </init-param>
+        <init-param>
+            <param-name>databaseName</param-name>
+            <param-value>Account</param-value>
+        </init-param>
+    </servlet>
+    <servlet>
+        <servlet-name>ProductControl</servlet-name>
+        <servlet-class>Controllers.ProductControl</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>modelbean</servlet-name>
+        <servlet-class>Controllers.modelbean</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LoginServlet</servlet-name>
         <url-pattern>/LoginServlet</url-pattern>
@@ -72,18 +112,29 @@
         <servlet-name>SignupServlet</servlet-name>
         <url-pattern>/SignupServlet</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LogoutControl</servlet-name>
+        <url-pattern>/LogoutControl</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ProductControl</servlet-name>
+        <url-pattern>/ProductControl</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>modelbean</servlet-name>
+        <url-pattern>/modelbean</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             30
         </session-timeout>
     </session-config>
     <welcome-file-list>
-        <welcome-file>index.jsp</welcome-file>
+        <welcome-file>mainpage-guest.jsp</welcome-file>
     </welcome-file-list>
     <servlet>
         <servlet-name>StickyCaptcha</servlet-name>
         <servlet-class>nl.captcha.servlet.SimpleCaptchaServlet</servlet-class>
-     
         <init-param>
             <param-name>width</param-name>
             <param-value>250</param-value>
@@ -93,7 +144,6 @@
             <param-value>75</param-value>
         </init-param>
     </servlet>
-
     <servlet-mapping>
         <servlet-name>StickyCaptcha</servlet-name>
         <url-pattern>/stickyImg</url-pattern>

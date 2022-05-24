@@ -16,10 +16,10 @@
         
         <form method="post" action="LoginServlet">
             
-            <input id="user" type="text" class="input" name="username" placeholder="Username">
-            
-            
-            <input id="pass" type="password" class="input" data-type="password" name="password" placeholder="Password">
+            <label for="username">Username: </label>
+                <input id="user" type="text" class="input" name="username" placeholder="Username"> <br><br>
+            <label for="password">Password: </label>
+                <input id="pass" type="password" class="input" data-type="password" name="password" placeholder="Password"> <br><br>
             
             <br> <br>
            <img src="<%=request.getRequestURL().toString().replace("/login.jsp", "")%>/stickyImg" style="display:none"/>
@@ -28,9 +28,10 @@
             
             <br>
             <input type="submit" value="Login"/>
+            
         </form>
         <br> <br>
-        <a href="index.jsp">Sign Up</a>
+        <a href="register.jsp">Sign Up</a>
     </body>
 </html>
 <style>
