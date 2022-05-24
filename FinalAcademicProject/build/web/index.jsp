@@ -12,6 +12,7 @@
         <title>Welcome Page</title>
     </head>
     <body>
+        <form method="POST" action="LoginControl">
         <div class="topnav">
         <label for="username">Username: </label>
                 <input id="user" type="text" class="input" name="username" placeholder="Username">
@@ -21,16 +22,14 @@
         <img src="<%=request.getRequestURL().toString().replace("/index.jsp", "")%>/stickyImg"/>
             <input name="captchaAns" placeholder="Captcha"/>
         <input type="submit" value="Login"/>
-        <form action ="register.jsp">
-      <button>
-         Register
-      </button>
+        <a href ="register.jsp">Register</a>
         <center>
             <img src="https://github.com/Thordenal123/FinalAcademicProjct/blob/main/Logo%201.jpg?raw=true" 
          width="360" 
          height="300"
          border: 50px solid #555;
             />
+        </form>
         
     </body>
 </html>

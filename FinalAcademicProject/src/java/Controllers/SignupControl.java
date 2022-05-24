@@ -88,13 +88,13 @@ public class SignupControl extends HttpServlet {
               
           }
           else{ 
-            response.sendRedirect("index.jsp");
+            response.sendRedirect("register.jsp");
             
           }
         }
         
         else{ 
-            response.sendRedirect("index.jsp");
+            response.sendRedirect("error.jsp");
         }
         
         }

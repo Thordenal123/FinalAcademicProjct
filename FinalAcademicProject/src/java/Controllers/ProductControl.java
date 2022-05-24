@@ -5,6 +5,7 @@
  */
 package Controllers;
 
+import Models.modelBeans;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
@@ -30,7 +31,7 @@ Connection conn;
     public void init(ServletConfig config) throws ServletException{
        super.init(config);
        
-        //Establish a Connection to the Database
+
         try {
             Class.forName(config.getInitParameter("jdbcClassName"));
             System.out.println("jdbcClassName: " + config.getInitParameter("jdbcClassName"));
@@ -45,7 +46,7 @@ Connection conn;
                     .append(config.getInitParameter("databaseName"));
             conn = DriverManager.getConnection(url.toString(), username, password);
             
-            
+        //Catch exception for sql
         } catch (SQLException sqle) {
             System.out.println("SQLException error occured - "
                     + sqle.getMessage());
@@ -60,12 +61,17 @@ Connection conn;
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            if(request.getParameter("Search") != null){
-                String hanapName = request.getParameter("name");
+        
+        try (PrintWriter out = response.getWriter()) 
+        {
+            //controller for searching users for admin
+            if(request.getParameter("Search") != null) 
+            {
+                String searchUser = request.getParameter("name");
                 if (conn != null) {
-                    List<modelBeans> Product = modelBeans.searchbean(conn, hanapName);
-                    if(Product.isEmpty()){
+                    List<modelBeans> Product = modelBeans.searchbean(conn, searchUser);
+                    if(Product.isEmpty())
+                    {
                     response.sendRedirect("error.jsp");
                     return;
                     }
@@ -91,13 +97,15 @@ Connection conn;
                     request.getRequestDispatcher("result.jsp").forward(request, response);
             
                     }
-
+             //controller for deleting the product
            else if(request.getParameter("delete")!= null){
                 
-                if(conn != null){
-                String name = request.getParameter("ProdDel");
+                if(conn != null)
+                {
+                String name = request.getParameter("itemDelete");
                 List<modelBeans> delete= modelBeans.searchbean(conn, name);
-                if(delete.isEmpty()){
+                if(delete.isEmpty())
+                {
                     response.sendRedirect("error.jsp");
                     return;
                     }

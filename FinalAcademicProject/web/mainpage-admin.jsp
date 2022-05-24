@@ -28,15 +28,15 @@
 
     <div class="box">
       <h1>Admin View Pannel</h1>
-      <form method="post" action="ProductServlet">
-      <button value="View all" name="viewall">
-         View All the Available Products Products
+      <form method="post" action="ProductControl">
+      <button value="View all items" name="viewallitems">
+         View All the available toys for purchasing
       </button>
       </form>
     
       <form action="deleteitem.jsp">
       <button type="submit"> 
-              Delete Items 
+              Delete Items with respect to the amount of toys sold
       </button>
       </form>
      

@@ -34,11 +34,6 @@ public class AccountModel {
         this.role = role;
     }
     
-    public AccountModel(String username, String password){
-        this.username = username;
-        this.password = password;
-    }
-    
      public String getUsername(){
         return username;
     }
@@ -75,6 +70,29 @@ public class AccountModel {
         return res;
     }
     
+/*       public String authenticateUser loginCheck(Connection conn){
+        List<AccountModel> res = new ArrayList<>();
+        try{
+            
+            String qString = "SELECT *  FROM USERTABLE WHERE ROLE = admin";
+            try (PreparedStatement ps = conn.prepareStatement(qString)) {
+                ps.setString(1, query);
+                
+                try (ResultSet rec = ps.executeQuery()) {
+                    
+                    if(role.equals("admin")){
+                        
+                    }
+                    ps.close();
+                }
+            }
+        }catch(SQLException e){
+            System.out.println(e.getMessage());
+        }
+        
+        return res;
+    }*/
+        
      public static void signupModel(Connection conn, String username, String password, String role)
      {
          

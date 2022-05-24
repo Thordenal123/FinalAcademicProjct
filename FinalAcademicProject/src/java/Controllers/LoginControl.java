@@ -30,7 +30,8 @@ import nl.captcha.Captcha;
 public class LoginControl extends HttpServlet {
 
      Connection conn;
-   String conPassword; 
+   String conPassword;
+   String userrole;
     @Override
     public void init(ServletConfig config) throws ServletException{
        super.init(config);
@@ -58,12 +59,13 @@ public class LoginControl extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            
+        
         String user = request.getParameter("username");
         String pass = request.getParameter("password");
+        String role = request.getParameter("role");
         request.setCharacterEncoding("UTF-8");
         String answer = request.getParameter("captchaAns");
-       
+        
         HttpSession session = request.getSession();
         session.setAttribute("username",user);
         Captcha captcha = (Captcha) session.getAttribute(Captcha.NAME);
@@ -81,7 +83,8 @@ public class LoginControl extends HttpServlet {
              
              if(conPassword.equals(pass))
              {
-                response.sendRedirect("mainpage.jsp"); 
+                 
+                     response.sendRedirect("mainpage-admin.jsp");
              }
              
              else
@@ -99,7 +102,7 @@ public class LoginControl extends HttpServlet {
         
         else
         { 
-            response.sendRedirect("login.jsp");
+            response.sendRedirect("register.jsp");
             return;
         }
         

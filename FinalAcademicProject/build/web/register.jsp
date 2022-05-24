@@ -29,14 +29,14 @@
 
       </nav>                          
     <div class="center">
-        <form action ="<%= request.getContextPath() %>/register" method="POST">
+        <form action ="SignupControl" method="POST">
  
                 <label for="username">Username: </label>
                 <input id="user" type="text" class="input" name="username" placeholder="Username"> <br><br>
                 <label for="password">Password: </label>
                 <input id="pass" type="password" class="input" data-type="password" name="password" placeholder="Password"> <br><br>
-                <label for="password">Password: </label>
-                <input id="pass" type="password" class="input" data-type="password" name="confirmPassword" placeholder="Confirm Password">
+                <label for="password">Confirm Password: </label>
+                <input id="pass" type="password" class="input" data-type="password" name="confirmPassword" placeholder="Confirm Password"><br>
 
                  <label for="role">Role: </label>
                  <select name="role">

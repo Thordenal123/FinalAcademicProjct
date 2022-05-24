@@ -33,7 +33,7 @@
             
             Welcome Guest ${username}
             <br>
-          A PDF print out of your information is on file:///C:/Users/Jayvee/Documents/NetBeansProjects/WebApplication1/Guest.pdf
+          A PDF print out of your information is on file:///C:\Netbeans\FinalAcademicProject/Guest.pdf
             <br>
             Password Decrypted: ${depassword}
             <form action ="Logout">
